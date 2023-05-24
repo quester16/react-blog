@@ -1,0 +1,35 @@
+
+.blog__container{
+  display: flex;
+  justify-content: space-between;
+}
+.blog{
+  width: 500px;
+  cursor: pointer;
+
+
+  .body{
+    padding: 20px;
+    background: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .img{
+    height: 300px;
+    img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+  }
+  .topic{
+    margin-bottom: 10px;
+    width: 450px;
+  }
+  .title{
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: 400px;
+  }
+}

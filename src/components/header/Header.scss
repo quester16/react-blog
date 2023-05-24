@@ -1,0 +1,52 @@
+.header{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  .links{
+    display: flex;
+    justify-content: space-between;
+  }
+  li:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  .logo{
+    background: rgba(26, 155, 212, 0.48);
+    font-size: 34px;
+    line-height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+
+    &:hover{
+      box-shadow: 0 0 15px rgba(26, 155, 212, 0.48);
+    }
+  }
+  a{
+    color: inherit;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #000;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    &:hover:before{
+      opacity: 1;
+    }
+  }
+
+}
