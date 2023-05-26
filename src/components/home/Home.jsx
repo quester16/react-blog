@@ -1,28 +1,25 @@
 import {useState, useEffect, useId} from "react";
 
 import './Home.scss'
+import {Link} from "react-router-dom";
+import GetPosts from "../../services/getPosts.js";
 
 const Home = () => {
 
-    const data = [
-        {
-            "img": 'src/assets/img/test.jpg',
-            "title": 'Как с помощью Data определить город по IP?',
-            "subTitle": 'Делюсь информацией о том, как определить IP по местоположение',
-            "topic": 'JavaScript'
-        }
-    ]
-
     const [blogs, setBlogs] = useState([])
-    const id = useId()
+
+    const {getData} = new GetPosts()
+
 
     useEffect(() => {
-        setBlogs(data)
+        getData()
+            .then(setBlogs)
     }, [])
 
-    const setContent = ({img, title, topic, subTitle}) => {
+    console.log(blogs)
+    const setContent = ({img, title, topic, subTitle, id}) => {
         return(
-            <div className="blog" key={id}>
+            <Link to={`/:${id}`} className="post" key={id} >
                 <div className="img">
                     <img src={img} alt="placeholder"/>
                 </div>
@@ -31,7 +28,7 @@ const Home = () => {
                     <div className="title">{title}</div>
                     <div className="sub-title">{subTitle}</div>
                 </div>
-            </div>
+            </Link>
         )
     }
 

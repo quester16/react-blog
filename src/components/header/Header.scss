@@ -3,10 +3,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+
   .links{
     display: flex;
     justify-content: space-between;
   }
+
   li:not(:last-child){
     margin-right: 30px;
   }
@@ -22,13 +24,17 @@
     font-family: monospace;
     cursor: pointer;
     transition: box-shadow .5s ease;
+    text-decoration: none;
 
     &:hover{
       box-shadow: 0 0 15px rgba(26, 155, 212, 0.48);
     }
   }
-  a{
-    color: inherit;
+a{
+  text-decoration: none;
+}
+  li > a{
+    color: #475C6F;
     position: relative;
 
     &:before{
@@ -50,3 +56,4 @@
   }
 
 }
+

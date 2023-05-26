@@ -2,29 +2,42 @@
 .blog__container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+
 }
-.blog{
+.post{
   width: 500px;
   cursor: pointer;
-
 
   .body{
     padding: 20px;
     background: #fff;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+
   }
+
   .img{
     height: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all .5s ease;
+    &:hover {
+      box-shadow: 0 0 60px rgba(205, 92, 92, 0.52);
+    }
+
     img {
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
     }
   }
+
   .topic{
     margin-bottom: 10px;
     width: 450px;
   }
+
   .title{
     font-size: 22px;
     line-height: 30px;
